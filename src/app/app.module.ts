@@ -10,6 +10,18 @@ import { AboutComponent } from './about/about.component';
 import { ProductsComponent } from './products/products.component';
 import { StoreComponent } from './store/store.component';
 import { UserComponent } from './user/user.component';
+import { HomeComponent } from './home/home.component';
+import { ListeemployeComponent } from './listeemploye/listeemploye.component';
+import { RoleComponent } from './role/role.component';
+import { HeaderempComponent } from './headeremp/headeremp.component';
+import { ListeplatComponent } from './listeplat/listeplat.component';
+import { PlatComponent } from './plat/plat.component';
+import { CommandeComponent } from './commande/commande.component';
+import { ListecommandeComponent } from './listecommande/listecommande.component';
+import { TablesComponent } from './tables/tables.component';
+import { ListetablesComponent } from './listetables/listetables.component';
+import { InscriptionComponent } from './inscription/inscription.component';
+
 
 
 @NgModule({
@@ -19,7 +31,19 @@ import { UserComponent } from './user/user.component';
     AboutComponent,
     ProductsComponent,
     StoreComponent,
-    UserComponent
+    UserComponent,
+    HomeComponent,
+    ListeemployeComponent,
+    RoleComponent,
+    HeaderempComponent,
+    ListeplatComponent,
+    PlatComponent,
+    CommandeComponent,
+    ListecommandeComponent,
+    TablesComponent,
+    ListetablesComponent,
+    InscriptionComponent,
+    
   ],
   imports: [
     BrowserModule,

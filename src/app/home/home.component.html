@@ -1,0 +1,54 @@
+
+<nav class="navbar navbar-expand-lg " style="background-color: rgb(194, 117, 17);">
+    <a class="navbar-brand police color" href="home" >Restaurant Shiva</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle police color" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Listes
+          </a>
+          <div class="dropdown-menu color" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item police" href="listeemploye">Liste des Employés </a>
+            <a class="dropdown-item police" href="#">Liste des Réservations </a>
+            <a class="dropdown-item police" href="listetables">Liste des Tables</a>
+            <a class="dropdown-item police" href="listeplat">Liste des Plats </a>
+            <a class="dropdown-item police"  href="listecommande">Liste des Commandes </a>
+        
+          
+          </div>
+        </li>
+       
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle police color" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Ajout
+            </a>
+            <div class="dropdown-menu color" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item police" href="#">Ajouter une Réservation</a>
+              <a class="dropdown-item police" href="tables">Ajouter une Table</a>
+              <a class="dropdown-item police" href="plat">Ajouter un Plat</a>
+              <a class="dropdown-item police" href="commande">Ajouter une Commande</a>
+            
+            
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+    <div *ngIf="condition"> <!-- ngIf pour les conditions connexion et deconnexion mis dans le header.ts-->
+    <td><a href="index">
+      <img src='../../assets/diwali.png' class="taille"> <!--mettre l inscription dans une image, avec une petite taille du css -->
+    </a></td>
+    </div>
+    <div *ngIf="!condition">
+    <td><a >
+      <img src='../../assets/hands-and-gestures.png' (click)="deconnexion()"class="taille"> <!--mettre l inscription dans une image, avec une petite taille du css -->
+    </a></td>
+  </div>
+  </nav>
+  
+
+

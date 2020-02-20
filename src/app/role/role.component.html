@@ -1,0 +1,33 @@
+<body>
+    
+    <form>
+        
+        <div class="container" >
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="affectationutilisateur">User</label>
+                    <select class="form-control" name="User" id="User" [(ngModel)]="idUser2">
+                        <option *ngFor="let user of listUser" [ngValue]="user.idUser">{{user.login}}
+                        </option> <!-- utilisateur vient de la liste utilisateur puis on injecte dans le ng value puis dans le ngModel-->
+                    </select>
+                </div>
+                <div class="form-group col-md-6"></div>
+                <div class="form-group col-md-4">
+                    <label for="affectationrole">Role</label>
+                    <select class="form-control" name="role" id="role" [(ngModel)]="idRole">
+                        <option *ngFor="let role of listRole" [ngValue]="role.idRole">{{role.libelleRole}}
+                        </option>
+                    </select>
+                </div>
+              
+            </div>
+
+            <td><button type="button" class="btn btn-outline-info"
+                (click)="affecter()" >Ajouter un role</button></td>
+       
+              
+         </div>
+        
+    </form>
+
+</body>

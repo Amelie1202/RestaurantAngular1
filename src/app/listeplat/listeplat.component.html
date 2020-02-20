@@ -1,0 +1,30 @@
+<app-headeremp></app-headeremp>
+
+<div class="form-group col-md-2">
+    <div class="container ">
+        <table class="table table-striped">
+            <thead class="table-secondary">
+                <th>Plat</th>
+                <th>Prix</th>
+                <th>Quantité</th>
+                <th>Modifier</th>
+                <th>Suppression</th>
+
+            </thead>
+            <tbody>
+                <tr class="color" *ngFor="let plat of listPlat">
+                    <td>{{plat.nomPlat}}</td>
+                    <td>{{plat.prix}}</td>
+                    <td>{{plat.quantite}}</td>
+                    <td><a type="button" class="btn btn-outline-warning" href="#">Modifier</a></td>
+                    <td><button type="button" class="btn btn-outline-danger"
+                            (click)="delete(plat.idPlat)">Supprimer</button></td>
+
+
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -92,7 +92,7 @@ helper = new JwtHelperService();
           showConfirmButton: false,
           timer: 3000
         }).then((result) => {
-          window.location.href = "#"
+          window.location.href = "http://localhost:4200/home"
         })
       }
       else {
