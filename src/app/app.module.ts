@@ -21,6 +21,7 @@ import { ListecommandeComponent } from './listecommande/listecommande.component'
 import { TablesComponent } from './tables/tables.component';
 import { ListetablesComponent } from './listetables/listetables.component';
 import { InscriptionComponent } from './inscription/inscription.component';
+import { ListereservationComponent } from './listereservation/listereservation.component';
 
 
 
@@ -43,6 +44,7 @@ import { InscriptionComponent } from './inscription/inscription.component';
     TablesComponent,
     ListetablesComponent,
     InscriptionComponent,
+    ListereservationComponent,
     
   ],
   imports: [

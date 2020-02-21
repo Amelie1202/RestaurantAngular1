@@ -1,7 +1,7 @@
 export class Reservation {
     idReservation: any;
-     datedebut: any;
-      datefin: any;
+     dateDebut: any;
+      dateFin: any;
       nbrepersonne: any;
   client: any;
  tables: any;

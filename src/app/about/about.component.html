@@ -65,21 +65,28 @@
                             <label for="name" class="label">Nom</label>
                             <div class="form-field-icon-wrap">
                               <span class="icon ion-android-person"></span>
-                              <input type="text" class="form-control" id="name">
+                              <input name="nom" type="text" class="form-control" id="name" [(ngModel)]="newClient.nom">
                             </div>
                           </div>
                           <div class="form-group col-md-5">
                             <label for="prenom" class="label">Prénom</label>
                             <div class="form-field-icon-wrap">
                               <span class="icon ion-android-person"></span>
-                              <input type="text" class="form-control" id="prenom">
+                              <input name="prenom"type="text" class="form-control" id="prenom"[(ngModel)]="newClient.prenom">
+                            </div>
+                          </div>
+                          <div class="form-group col-md-5">
+                            <label for="telephone" class="label">Téléphone</label>
+                            <div class="form-field-icon-wrap">
+                              <span class="icon ion-android-person"></span>
+                              <input name="telephone"type="text" class="form-control" id="telephone"[(ngModel)]="newClient.telephone">
                             </div>
                           </div>
                           <div class="form-group col-md-5">
                             <label for="email" class="label">Email</label>
                             <div class="form-field-icon-wrap">
                               <span class="icon ion-email"></span>
-                              <input type="email" class="form-control" id="email">
+                              <input name="email" type="email" class="form-control" id="email" [(ngModel)]="newClient.email">
                             </div>
                           </div>
       
@@ -87,12 +94,12 @@
                             <label for="persons" class="label">Nombre de personne</label>
                             <div class="form-field-icon-wrap">
                               <span class="icon ion-android-arrow-dropdown"></span>
-                              <select name="persons" id="persons" class="form-control">
-                                <option value="">1 personne</option>
-                                <option value="">2 personnes</option>
-                                <option value="">3 personnes</option>
-                                <option value="">4 personnes</option>
-                                <option value="">5+ personnes</option>
+                              <select name="personne" id="persons" class="form-control" [(ngModel)]="nbreResaPersonne">
+                                <option selected>1</option>
+                                <option selected>2</option>
+                                <option selected>3</option>  
+                                <option selected>4</option>
+                                <option selected>6</option> 
                               </select>
                             </div>
                           </div>
@@ -100,21 +107,28 @@
                             <label for="date" class="label">Date</label>
                             <div class="form-field-icon-wrap">
                               <span class="icon ion-calendar"></span>
-                              <input type="text" class="form-control" id="date">
+                              <input name="date" type="date" class="form-control" id="date"[(ngModel)]="date">
                             </div>
                           </div>
                           <div class="form-group col-md-5">
-                            <label for="time" class="label">Heure</label>
+                            <label for="date" class="label">Heure</label>
                             <div class="form-field-icon-wrap">
-                              <span class="icon ion-android-time"></span>
-                              <input type="text" class="form-control" id="time">
+                              
+                              <select name="time" id="time" class="form-control" [(ngModel)]="horaire">
+                                <option selected>12:00</option>
+                                <option selected>13:00</option>
+                                <option selected>18:00</option>
+                                <option selected>19:00</option>
+                                <option selected>20:00</option>
+                              </select>
                             </div>
                           </div>
                         </div>
                         <div class="row justify-content-center">
                           <div class="col-md-6">
-                            <input type="submit" class="btn btn-primary btn-outline-primary btn-block" value="Réserver">
-                            <!-- <p><a href="#" class="btn btn-primary btn-outline-primary btn-sm">Read More</a></p> -->
+                            <button type="button" (click)="valider()" class="btn btn-outline-primary">Valider</button>
+                            <!--<input type="button" class="btn btn-primary btn-outline-primary btn-block" value="Réserver" (click)>
+                             <p><a href="#" class="btn btn-primary btn-outline-primary btn-sm">Read More</a></p> -->
                           </div>
                         </div>
                       </form>
