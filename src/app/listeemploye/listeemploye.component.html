@@ -1,5 +1,6 @@
 <app-headeremp></app-headeremp>
-<div class="form-group col-md-2">
+<br><br>
+<div class="text-center">
     <div class="container ">
         <table class="table table-striped">
             <thead class="table-secondary">
@@ -8,7 +9,6 @@
                 <th>Prénom</th>
                 <th>Email</th>
                 <th>Tables</th>
-                <th></th>
                 <th>Modifier</th>
                 <th>Suppression</th>
 
@@ -19,8 +19,8 @@
                     <td>{{user.nom}}</td>
                     <td>{{user.prenom}}</td>
                     <td>{{user.email}}</td>
-                    <td><a type="button" class="btn btn-outline-warning" href="#">ses tables</a></td>
-                    <td><a type="button" class="btn btn-outline-warning" href="#">Modifier</a></td>
+                    <td><a type="button" class="btn btn-outline-info"  href="{{'http://localhost:4200/affichertables/'+user.idUser}}">ses tables</a></td>
+                    <td><a type="button" class="btn btn-outline-warning" href="{{'http://localhost:4200/modifieremploye/'+user.idUser}}">Modifier</a></td>
                     <td><button type="button" class="btn btn-outline-danger"
                             (click)="delete(user.idUser)">Supprimer</button></td>
 

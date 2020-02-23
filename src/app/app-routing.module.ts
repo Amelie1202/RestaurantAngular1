@@ -17,6 +17,12 @@ import { TablesComponent } from './tables/tables.component';
 import { ListetablesComponent } from './listetables/listetables.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { ListereservationComponent } from './listereservation/listereservation.component';
+import { ModifierTablesComponent } from './modifier-tables/modifier-tables.component';
+import { ModifierplatComponent } from './modifierplat/modifierplat.component';
+import { AffichertablesComponent } from './affichertables/affichertables.component';
+import { ModifieremployeComponent } from './modifieremploye/modifieremploye.component';
+import { ModifiercommandeComponent } from './modifiercommande/modifiercommande.component';
+import { MenuComponent } from './menu/menu.component';
 
 
 const routes: Routes = [
@@ -85,7 +91,33 @@ const routes: Routes = [
   {
     path:"listereservation",
     component:ListereservationComponent
+  },
+  {
+    path:"modifierTables/:id",
+    component:ModifierTablesComponent
+  },
+
+  {
+    path:"modifierplat/:id",
+    component:ModifierplatComponent
+  },
+  {
+    path:"affichertables/:id",
+    component:AffichertablesComponent
+  },
+  {
+    path:"modifieremploye/:id",
+    component:ModifieremployeComponent
+  },
+  {
+    path:"modifiercommande/:id",
+    component:ModifiercommandeComponent
+  },
+  {
+    path:"menu",
+    component:MenuComponent
   }
+  
 
 ];
 

@@ -22,6 +22,12 @@ import { TablesComponent } from './tables/tables.component';
 import { ListetablesComponent } from './listetables/listetables.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { ListereservationComponent } from './listereservation/listereservation.component';
+import { ModifierTablesComponent } from './modifier-tables/modifier-tables.component';
+import { ModifierplatComponent } from './modifierplat/modifierplat.component';
+import { AffichertablesComponent } from './affichertables/affichertables.component';
+import { ModifieremployeComponent } from './modifieremploye/modifieremploye.component';
+import { ModifiercommandeComponent } from './modifiercommande/modifiercommande.component';
+import { MenuComponent } from './menu/menu.component';
 
 
 
@@ -45,6 +51,12 @@ import { ListereservationComponent } from './listereservation/listereservation.c
     ListetablesComponent,
     InscriptionComponent,
     ListereservationComponent,
+    ModifierTablesComponent,
+    ModifierplatComponent,
+    AffichertablesComponent,
+    ModifieremployeComponent,
+    ModifiercommandeComponent,
+    MenuComponent,
     
   ],
   imports: [

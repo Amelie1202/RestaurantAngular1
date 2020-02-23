@@ -1,5 +1,6 @@
 <app-headeremp></app-headeremp>
-<div class="form-group col-md-4">
+<br><br>
+<div class="text-center">
     <div class="container ">
         <table class="table table-striped">
             <thead class="table-secondary">
@@ -17,7 +18,7 @@
                     <td>{{tables.nbreplace}}</td>
                     <td>{{tables?.user?.idUser}}</td>
                    
-                    <td><a type="button" class="btn btn-outline-warning" href="#">Modifier</a></td>
+                    <td><a type="button" class="btn btn-outline-warning"  href="{{'http://localhost:4200/modifierTables/'+tables.idTables}}" >Modifier</a></td>
                     <td><button type="button" class="btn btn-outline-danger"
                             (click)="delete(user.idUser)">Supprimer</button></td>
 

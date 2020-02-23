@@ -31,5 +31,8 @@ return this.http.get<Tables>("http://localhost:8080/tables/"+id).pipe()
   affecterUser(idTables: number, idUser: number){
     return this.http.put("http://localhost:8080/tables/affecterCommande/"+idTables+"/"+ idUser,"").pipe()
   }
+  findByUser(idUser: number){
+    return this.http.get<Tables[]>("http://localhost:8080/tables/byUser/"+idUser).pipe()
+  }
   
 }

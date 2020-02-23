@@ -1,9 +1,11 @@
 <app-headeremp></app-headeremp>
-<div class="form-group col-md-2">
+<br><br>
+<div class="text-center">
     <div class="container color">
         <table class="table table-striped">
             <thead class="table-secondary">
                 <th>Commande</th>
+                <th>Numéro de la commande</th>
                 <th>Tables</th>
                 
                 <th>Modifier</th>
@@ -13,10 +15,11 @@
             <tbody>
                 <tr class="color" *ngFor="let commande of listCommande">
                     <td>{{commande.idCommande}}</td>
+                    <td>{{commande.numcommande}}</td>
                     <td>{{commande?.tables?.idTables}}</td>
                     
                     
-                    <td><a type="button" class="btn btn-outline-warning" href="#">Modifier</a></td>
+                    <td><a type="button" class="btn btn-outline-warning" href="{{'http://localhost:4200/modifiercommande/'+commande.idCommande}}">Modifier</a></td>
                     <td><button type="button" class="btn btn-outline-danger"
                             (click)="delete(commande.idCommande)">Supprimer</button></td>
 

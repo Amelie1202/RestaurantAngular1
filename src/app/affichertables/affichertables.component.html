@@ -1,0 +1,23 @@
+<app-headeremp></app-headeremp>
+<div class="text-center">
+<div class="form-group col-md-4">
+    <div class="container color">
+        <table class="table table-striped">
+            <thead class="table-secondary">
+                <th>Table</th>
+                <th>Nombre de place</th>
+                
+
+            </thead>
+            <tbody>
+                <tr class="color" *ngFor="let tables of listTablesUser">
+                    <td>{{tables.idTables}}</td>
+                    <td>{{tables.nbreplace}}</td>
+            
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>

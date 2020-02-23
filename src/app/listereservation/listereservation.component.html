@@ -1,5 +1,6 @@
 <app-headeremp></app-headeremp>
-<div class="form-group col-md-2">
+<br><br>
+<div class="text-center">
     <div class="container color">
         <table class="table table-striped">
             <thead class="table-secondary">
@@ -9,7 +10,6 @@
                 <th>Date de fin</th>
                 <th>Tables</th>
                 <th>Nombre de personne</th>
-                <th>Modifier</th>
                 <th>Suppression</th>
             </thead>
             <tbody>
@@ -21,7 +21,6 @@
                     <td>{{reservation?.tables?.idTables}}</td>
                     <td>{{reservation?.nbrepersonne}}</td>
                    
-                    <td><a type="button" class="btn btn-outline-warning" href="#">Modifier</a></td>
                     <td><button type="button" class="btn btn-outline-danger"
                             (click)="delete(reservation.idReservation)">Supprimer</button></td>
 
