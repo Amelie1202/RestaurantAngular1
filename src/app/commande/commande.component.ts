@@ -39,7 +39,7 @@ listTables: Tables[]=[];
 Swal.fire({
   position: 'top-end',
   icon: 'success',
-  title: 'Commande ajoutée',
+  title: 'Commande affectée à une table',
   showConfirmButton: false,
   timer: 3000
 })

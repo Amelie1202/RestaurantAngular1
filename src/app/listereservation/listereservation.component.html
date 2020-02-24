@@ -10,6 +10,7 @@
                 <th>Date de fin</th>
                 <th>Tables</th>
                 <th>Nombre de personne</th>
+                <th>Commande</th>
                 <th>Suppression</th>
             </thead>
             <tbody>
@@ -21,6 +22,7 @@
                     <td>{{reservation?.tables?.idTables}}</td>
                     <td>{{reservation?.nbrepersonne}}</td>
                    
+                    <td><a type="button" class="btn btn-outline-warning" href="commandeplat">Passer une commande</a></td>
                     <td><button type="button" class="btn btn-outline-danger"
                             (click)="delete(reservation.idReservation)">Supprimer</button></td>
 

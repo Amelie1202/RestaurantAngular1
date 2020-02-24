@@ -20,6 +20,9 @@ export class AboutComponent implements OnInit {
   datefin: Date = new Date();
   tablesdipo: Tables[] = [];
   newClient: Client = new Client();
+  idClientE: number;
+  idClient: number;
+  listReservation: Reservation[] = [];
 
   constructor(private reservationService: ReservationService, private clientService: ClientService) { }
 
@@ -71,27 +74,58 @@ export class AboutComponent implements OnInit {
                             window.location.href = "http://localhost:4200/index"
                           })
                         }
-                  
 
-                        
+
+
+                      )
+                    }
                   )
                 }
               )
-            }
-              )
-      }else {
+            } else {
+              this.newReservation.client = data;
+              this.idClientE = this.newReservation.client.idClient;
+              this.reservationService.findByDate(this.datedebut).subscribe(
+                data => {
+                  this.listReservation = data.filter(x => x.client.idClient == this.idClientE);
+                  if (this.listReservation.length == 0) {
+                    this.reservationService.addNew(this.newReservation).subscribe(
+                      data => {
+                        Swal.fire({
+                          position: 'top-end',
+                          icon: 'success',
+                          title: 'Votre réservation est bien enregistrée!',
+                          showConfirmButton: true,
 
-        Swal.fire({
-          position: 'top-end',
-          icon: 'error',
-          title: 'Aucune table disponible, merci de choisir une autre date',
-          showConfirmButton: false,
-          timer: 3000
-        })
-      }
+                        })
+
+                      }
+                    )
+                  }else{
+                    Swal.fire({
+                      position: 'top-end',
+                      icon: 'error',
+                      title: 'Vous avez déjà réservé cette table!',
+                      showConfirmButton: true,
+
+                    })
+
+
+                  }
+                }
+              )
+
+              Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: 'Aucune table disponible, merci de choisir une autre date',
+                showConfirmButton: false,
+                timer: 3000
+              })
+            }
           }
         )
-}
+      }
     )
   }
 }

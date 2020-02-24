@@ -23,6 +23,7 @@ import { AffichertablesComponent } from './affichertables/affichertables.compone
 import { ModifieremployeComponent } from './modifieremploye/modifieremploye.component';
 import { ModifiercommandeComponent } from './modifiercommande/modifiercommande.component';
 import { MenuComponent } from './menu/menu.component';
+import { CommandeplatComponent } from './commandeplat/commandeplat.component';
 
 
 const routes: Routes = [
@@ -116,6 +117,10 @@ const routes: Routes = [
   {
     path:"menu",
     component:MenuComponent
+  },
+  {
+    path:"commandeplat",
+    component:CommandeplatComponent
   }
   
 

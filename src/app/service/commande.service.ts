@@ -19,13 +19,13 @@ return this.http.get<Commande>("http://localhost:8080/commandes/"+id).pipe()
   deleteOne(id:number){ 
     return this.http.delete("http://localhost:8080/commandes/delete2/"+id).pipe() 
   }
-  addNew(plat:Commande){
+  addNew(commande:Commande){
 
-    return this.http.post("http://localhost:8080/commandes", plat).pipe()  
+    return this.http.post("http://localhost:8080/commandes", commande).pipe()  
   }
 
-  update(plat:Commande, id:number){
-    return this.http.put("http://localhost:8080/commandes/"+id, plat).pipe() 
+  update(commande:Commande, id:number){
+    return this.http.put("http://localhost:8080/commandes/"+id, commande).pipe() 
   }
 
   affecterTables(idCommande: number, idTables: number){

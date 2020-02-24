@@ -1,0 +1,45 @@
+<app-headeremp></app-headeremp>
+<br><br>
+<body>
+    <form>
+        <div class="text-center">
+        <div class="container color">
+            <div class="form-row">
+                
+                <div class="form-group col-md-4">
+                    <label for="commande">Numéro de la commande</label>
+                    <input [(ngModel)]="commandeplat.Idcommande" type="text" name="commande" class="form-control" id="commande">
+                </div>
+                
+                <div class="form-group col-md-4">
+                    <label for="plat">Plats</label>
+                    <select class="form-control" name="plat" id="plat" [(ngModel)]="commandeplat.plat" (change)="majPrix()">
+                        <option *ngFor="let plat of listPlat"[ngValue]="plat">{{plat.nomPlat}}
+                        </option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4"></div>
+                <div class="form-group col-md-4">
+                    <label for="quantite">Quantite</label>
+                    <input [(ngModel)]="commandeplat.quantites" type="text" name="quantite" class="form-control" id="quantite"
+                    (keyup)="updateTotal()">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="prix">Prix</label>
+                    <input [ngModel]="commandeplat.prix" type="text" name="prix" class="form-control" id="prix">
+                </div>
+                <div class="form-group col-md-4"></div>
+                <div class="form-group col-md-4">
+                    <label for="total">Total</label>
+                    <input [(ngModel)]="commandeplat.total" type="text" name="total" class="form-control" id="total">
+                </div>
+            </div>
+
+            <td><button type="button" class="btn btn-outline-info" (click)="addCommandePlat()">Nouvelle commande</button></td>
+
+
+        </div>
+        </div>
+    </form>
+
+</body>
