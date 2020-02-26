@@ -21,7 +21,7 @@ return this.http.get<Commande>("http://localhost:8080/commandes/"+id).pipe()
   }
   addNew(commande:Commande){
 
-    return this.http.post("http://localhost:8080/commandes", commande).pipe()  
+    return this.http.post<Commande>("http://localhost:8080/commandes/", commande).pipe()  
   }
 
   update(commande:Commande, id:number){
@@ -31,5 +31,7 @@ return this.http.get<Commande>("http://localhost:8080/commandes/"+id).pipe()
   affecterTables(idCommande: number, idTables: number){
     return this.http.put("http://localhost:8080/commandes/affecterTables/"+idCommande+"/"+ idTables,"").pipe()
   }
+
+
   
 }

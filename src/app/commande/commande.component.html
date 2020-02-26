@@ -16,7 +16,13 @@
                         </option>
                     </select>
                 </div>
-
+                <div class="form-group col-md-4">
+                    <label for="affectationresa">Reservation</label>
+                    <select class="form-control" name="reservation" id="reservation" [(ngModel)]="newCommande.reservation">
+                        <option *ngFor="let reservation of listResa" [ngValue]="reservation">{{reservation.idReservation}}
+                        </option>
+                    </select>
+                </div>
 
             </div>
 

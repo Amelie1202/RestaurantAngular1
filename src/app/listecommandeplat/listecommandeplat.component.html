@@ -1,0 +1,35 @@
+<app-headeremp></app-headeremp>
+<br><br>
+<div class="text-center">
+    <div class="container color">
+        <table class="table table-striped">
+            <thead class="table-secondary">
+                <th>Id</th>
+                <th>Numéro de la commande</th>
+                <th>Plat choisi</th>
+                <th>Quantité</th>
+                <th>Facture</th>
+                <th>Suppression</th>
+
+            </thead>
+            <tbody>
+                <tr class="color" *ngFor="let commandeplat of listCommandeplat">
+                    <td>{{commandeplat.idCommandePlat}}</td>
+                    <td>{{commandeplat?.commande?.idCommande}}</td>
+                    <td>{{commandeplat?.plat?.idPlat}}</td>
+                    <td>{{commandeplat.quantites}}</td>
+                  
+                    
+                    <td><a type="button" class="btn btn-outline-warning" href="{{'http://localhost:4200/facture/'+commandeplat.idCommandePlat}}">Editer une facture</a></td>
+                    <td><button type="button" class="btn btn-outline-danger"
+                            (click)="delete(commandeplat.idCommandeplat)">Supprimer</button></td>
+
+
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+

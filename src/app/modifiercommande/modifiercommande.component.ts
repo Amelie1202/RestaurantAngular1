@@ -5,6 +5,8 @@ import { ActivatedRoute } from '@angular/router';
 import Swal from'sweetalert2';
 import { Tables } from '../model/tables';
 import { TablesService } from '../service/tables.service';
+import { Reservation } from '../model/reservation';
+import { ReservationService } from '../service/reservation.service';
 
 @Component({
   selector: 'app-modifiercommande',
@@ -15,8 +17,9 @@ export class ModifiercommandeComponent implements OnInit {
 idCommande:number;
 commande: Commande = new Commande();
 listTables: Tables[]=[];
+listResa: Reservation[]=[];
 
-  constructor(private commandeService: CommandeService, private tablesService: TablesService, private route: ActivatedRoute) { 
+  constructor(private commandeService: CommandeService, private tablesService: TablesService, private route: ActivatedRoute, private reservationService: ReservationService) { 
     this.idCommande = parseInt(this.route.snapshot.paramMap.get('id'));
   }
 
@@ -29,6 +32,11 @@ listTables: Tables[]=[];
     this.tablesService.getAll().subscribe(
       data => {
         this.listTables= data;
+      }
+    );
+    this.reservationService.getAll().subscribe(
+      data => {
+        this.listResa= data;
       }
     );
   }

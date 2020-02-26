@@ -7,7 +7,7 @@
                 <th>Commande</th>
                 <th>Numéro de la commande</th>
                 <th>Tables</th>
-                
+                <th>Réservation</th>
                 <th>Modifier</th>
                 <th>Suppression</th>
 
@@ -17,7 +17,7 @@
                     <td>{{commande.idCommande}}</td>
                     <td>{{commande.numcommande}}</td>
                     <td>{{commande?.tables?.idTables}}</td>
-                    
+                    <td>{{commande?.reservation?.idReservation}}</td>
                     
                     <td><a type="button" class="btn btn-outline-warning" href="{{'http://localhost:4200/modifiercommande/'+commande.idCommande}}">Modifier</a></td>
                     <td><button type="button" class="btn btn-outline-danger"

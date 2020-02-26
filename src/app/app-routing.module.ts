@@ -24,6 +24,8 @@ import { ModifieremployeComponent } from './modifieremploye/modifieremploye.comp
 import { ModifiercommandeComponent } from './modifiercommande/modifiercommande.component';
 import { MenuComponent } from './menu/menu.component';
 import { CommandeplatComponent } from './commandeplat/commandeplat.component';
+import { ListecommandeplatComponent } from './listecommandeplat/listecommandeplat.component';
+import { FactureComponent } from './facture/facture.component';
 
 
 const routes: Routes = [
@@ -119,8 +121,16 @@ const routes: Routes = [
     component:MenuComponent
   },
   {
-    path:"commandeplat",
+    path:"commandeplat/:id",
     component:CommandeplatComponent
+  },
+  {
+    path:"listecommandeplat",
+    component:ListecommandeplatComponent
+  },
+  {
+    path:"facture/:id",
+    component:FactureComponent
   }
   
 

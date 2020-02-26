@@ -4,6 +4,8 @@ import { Tables } from '../model/tables';
 import { CommandeService } from '../service/commande.service';
 import { TablesService } from '../service/tables.service';
 import Swal from'sweetalert2';
+import { Reservation } from '../model/reservation';
+import { ReservationService } from '../service/reservation.service';
 
 @Component({
   selector: 'app-commande',
@@ -14,8 +16,9 @@ export class CommandeComponent implements OnInit {
 newCommande: Commande = new Commande();
 listCommande: Commande[]=[];
 listTables: Tables[]=[];
+listResa: Reservation[]=[];
 
-  constructor(private commandeService: CommandeService, private tablesService: TablesService) { }
+  constructor(private commandeService: CommandeService, private tablesService: TablesService, private reservationService: ReservationService) { }
 
   ngOnInit() {
     this.commandeService.getAll().subscribe(
@@ -26,6 +29,11 @@ listTables: Tables[]=[];
     this.tablesService.getAll().subscribe(
       data => {
         this.listTables= data;
+      }
+    );
+    this.reservationService.getAll().subscribe(
+      data => {
+        this.listResa= data;
       }
     );
   }
@@ -39,7 +47,7 @@ listTables: Tables[]=[];
 Swal.fire({
   position: 'top-end',
   icon: 'success',
-  title: 'Commande affectée à une table',
+  title: 'Commande enregistrée',
   showConfirmButton: false,
   timer: 3000
 })

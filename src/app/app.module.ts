@@ -29,6 +29,8 @@ import { ModifieremployeComponent } from './modifieremploye/modifieremploye.comp
 import { ModifiercommandeComponent } from './modifiercommande/modifiercommande.component';
 import { MenuComponent } from './menu/menu.component';
 import { CommandeplatComponent } from './commandeplat/commandeplat.component';
+import { FactureComponent } from './facture/facture.component';
+import { ListecommandeplatComponent } from './listecommandeplat/listecommandeplat.component';
 
 
 
@@ -59,6 +61,9 @@ import { CommandeplatComponent } from './commandeplat/commandeplat.component';
     ModifiercommandeComponent,
     MenuComponent,
     CommandeplatComponent,
+    FactureComponent,
+    ListecommandeplatComponent,
+   
     
   ],
   imports: [

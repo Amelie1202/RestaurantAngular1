@@ -1,0 +1,59 @@
+<app-headeremp></app-headeremp>
+<br><br>
+<div class="text-center">
+    <div class="container color">
+        <table class="table table-striped">
+            <thead class="table-secondary">
+                <th>Numéro de la commande</th>
+                <th>Plat choisi</th>
+                <th>Quantité</th>
+                <th>Prix</th>
+                <th>Total</th>
+
+
+            </thead>
+            <tbody>
+                <tr class="color">
+                    <td>{{commandeplat?.commande?.idCommande}}</td>
+                    <td>{{commandeplat?.plat?.nomPlat}}</td>
+                    <td>{{commandeplat.quantites}}</td>
+                    <td>{{commandeplat.prix}}</td>
+                    <td>{{commandeplat.total}}</td>
+
+
+
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+<td>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Payer
+    </button>
+</td>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Facture</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Merci de votre paiement!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>

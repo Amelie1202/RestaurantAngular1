@@ -22,7 +22,7 @@
                     <td>{{reservation?.tables?.idTables}}</td>
                     <td>{{reservation?.nbrepersonne}}</td>
                    
-                    <td><a type="button" class="btn btn-outline-warning" href="commandeplat">Passer une commande</a></td>
+                    <td><a type="button" class="btn btn-outline-warning" href="{{'http://localhost:4200/commandeplat/'+reservation.idReservation}}">Passer une commande</a></td>
                     <td><button type="button" class="btn btn-outline-danger"
                             (click)="delete(reservation.idReservation)">Supprimer</button></td>
 
